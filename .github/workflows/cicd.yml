@@ -28,7 +28,6 @@ jobs:
           push: true # Will only build if this is not here
           context: azure-vote
           tags: |
-            ${{ secrets.ACR_NAME }}.azurecr.io/${{ github.repository }}:${{ github.sha }}
             ${{ secrets.ACR_NAME }}.azurecr.io/${{ github.repository }}:latest
   load-test:
     runs-on: ubuntu-latest
